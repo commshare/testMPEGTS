@@ -1,0 +1,204 @@
+root@ubuntu:/home/zhangbin/ffmpeg/RECORD_TEST/refref/testHLS/ts# ffprobe sub_108.m3u8_26hours.ts -loglevel trace
+ffprobe version 3.4.1-1~16.04.york0 Copyright (c) 2007-2017 the FFmpeg developers
+  built with gcc 5.4.0 (Ubuntu 5.4.0-6ubuntu1~16.04.5) 20160609
+  configuration: --prefix=/usr --extra-version='1~16.04.york0' --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --enable-gpl --disable-stripping --enable-avresample --enable-avisynth --enable-gnutls --enable-ladspa --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librubberband --enable-librsvg --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzmq --enable-libzvbi --enable-omx --enable-openal --enable-opengl --enable-sdl2 --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libopencv --enable-libx264 --enable-shared
+  libavutil      55. 78.100 / 55. 78.100
+  libavcodec     57.107.100 / 57.107.100
+  libavformat    57. 83.100 / 57. 83.100
+  libavdevice    57. 10.100 / 57. 10.100
+  libavfilter     6.107.100 /  6.107.100
+  libavresample   3.  7.  0 /  3.  7.  0
+  libswscale      4.  8.100 /  4.  8.100
+  libswresample   2.  9.100 /  2.  9.100
+  libpostproc    54.  7.100 / 54.  7.100
+[NULL @ 0x55d246312700] Opening 'sub_108.m3u8_26hours.ts' for reading
+[file @ 0x55d246312f20] Setting default whitelist 'file,crypto'
+Probing mp3 score:1 size:2048
+Probing mpegts score:50 size:2048
+[mpegts @ 0x55d246312700] Format mpegts probed with size=2048 and score=50
+score: 44, dvhs_score: -3, fec_score: -1 
+[mpegts @ 0x55d246312700] Filter: pid=0x11 type=1
+[mpegts @ 0x55d246312700] Filter: pid=0x0 type=1
+[mpegts @ 0x55d246312700] SDT:
+[mpegts @ 0x55d246312700] tag: 0x48 len=18
+[mpegts @ 0x55d246312700] new_program: id=0x0001
+[mpegts @ 0x55d246312700] PAT:
+[mpegts @ 0x55d246312700] sid=0x1 pid=0x1000
+[mpegts @ 0x55d246312700] new_program: id=0x0001
+[mpegts @ 0x55d246312700] Filter: pid=0x1000 type=1
+[mpegts @ 0x55d246312700] PMT: len 26
+[mpegts @ 0x55d246312700] sid=0x1 sec_num=0/0 version=0 tid=2
+[mpegts @ 0x55d246312700] pcr_pid=0x100
+[mpegts @ 0x55d246312700] Filter: pid=0x100 type=0
+[mpegts @ 0x55d246312700] stream=0 stream_type=1b pid=100 prog_reg_desc=
+[mpegts @ 0x55d246312700] Filter: pid=0x101 type=0
+[mpegts @ 0x55d246312700] stream=1 stream_type=f pid=101 prog_reg_desc=
+[mpegts @ 0x55d246312700] tuning done
+[mpegts @ 0x55d246312700] Before avformat_find_stream_info() pos: 0 bytes read:32768 seeks:0 nb_streams:2
+[mpegts @ 0x55d246312700] Skipping after seek
+[mpegts @ 0x55d246312700] SDT:
+[mpegts @ 0x55d246312700] tag: 0x48 len=18
+[mpegts @ 0x55d246312700] new_program: id=0x0001
+[mpegts @ 0x55d246312700] PAT:
+[mpegts @ 0x55d246312700] sid=0x1 pid=0x1000
+[mpegts @ 0x55d246312700] new_program: id=0x0001
+[mpegts @ 0x55d246312700] PMT: len 26
+[mpegts @ 0x55d246312700] sid=0x1 sec_num=0/0 version=0 tid=2
+[mpegts @ 0x55d246312700] pcr_pid=0x100
+[mpegts @ 0x55d246312700] pid=100 pes_code=0x1e0
+    Last message repeated 1 times
+[mpegts @ 0x55d246312700] PAT:
+[mpegts @ 0x55d246312700] PMT: len 26
+[mpegts @ 0x55d246312700] pid=100 pes_code=0x1e0
+[AVBSFContext @ 0x55d246386360] nal_unit_type: 9, nal_ref_idc: 0
+[AVBSFContext @ 0x55d246386360] nal_unit_type: 7, nal_ref_idc: 1
+[AVBSFContext @ 0x55d246386360] nal_unit_type: 8, nal_ref_idc: 1
+[AVBSFContext @ 0x55d246386360] nal_unit_type: 9, nal_ref_idc: 0
+[AVBSFContext @ 0x55d246386360] nal_unit_type: 7, nal_ref_idc: 1
+[AVBSFContext @ 0x55d246386360] nal_unit_type: 8, nal_ref_idc: 1
+[AVBSFContext @ 0x55d246386360] nal_unit_type: 5, nal_ref_idc: 1
+[h264 @ 0x55d246317160] nal_unit_type: 9, nal_ref_idc: 0
+[h264 @ 0x55d246317160] nal_unit_type: 7, nal_ref_idc: 1
+[h264 @ 0x55d246317160] nal_unit_type: 8, nal_ref_idc: 1
+[h264 @ 0x55d246317160] nal_unit_type: 9, nal_ref_idc: 0
+[h264 @ 0x55d246317160] nal_unit_type: 7, nal_ref_idc: 1
+[h264 @ 0x55d246317160] nal_unit_type: 8, nal_ref_idc: 1
+[h264 @ 0x55d246317160] nal_unit_type: 5, nal_ref_idc: 1
+[h264 @ 0x55d246317160] Reinit context to 544x960, pix_fmt: yuv420p
+[mpegts @ 0x55d246312700] pid=100 pes_code=0x1e0
+[h264 @ 0x55d246317160] nal_unit_type: 9, nal_ref_idc: 0
+[h264 @ 0x55d246317160] nal_unit_type: 1, nal_ref_idc: 1
+[mpegts @ 0x55d246312700] PAT:
+[mpegts @ 0x55d246312700] PMT: len 26
+[mpegts @ 0x55d246312700] pid=100 pes_code=0x1e0
+[h264 @ 0x55d246317160] nal_unit_type: 9, nal_ref_idc: 0
+[h264 @ 0x55d246317160] nal_unit_type: 1, nal_ref_idc: 1
+[mpegts @ 0x55d246312700] pid=100 pes_code=0x1e0
+[h264 @ 0x55d246317160] nal_unit_type: 9, nal_ref_idc: 0
+[h264 @ 0x55d246317160] nal_unit_type: 1, nal_ref_idc: 1
+[mpegts @ 0x55d246312700] PAT:
+[mpegts @ 0x55d246312700] PMT: len 26
+[mpegts @ 0x55d246312700] pid=100 pes_code=0x1e0
+[h264 @ 0x55d246317160] nal_unit_type: 9, nal_ref_idc: 0
+[h264 @ 0x55d246317160] nal_unit_type: 1, nal_ref_idc: 1
+[mpegts @ 0x55d246312700] PAT:
+[mpegts @ 0x55d246312700] PMT: len 26
+[mpegts @ 0x55d246312700] pid=100 pes_code=0x1e0
+[h264 @ 0x55d246317160] nal_unit_type: 9, nal_ref_idc: 0
+[h264 @ 0x55d246317160] nal_unit_type: 1, nal_ref_idc: 1
+[mpegts @ 0x55d246312700] pid=100 pes_code=0x1e0
+[h264 @ 0x55d246317160] nal_unit_type: 9, nal_ref_idc: 0
+[h264 @ 0x55d246317160] nal_unit_type: 1, nal_ref_idc: 1
+[mpegts @ 0x55d246312700] SDT:
+[mpegts @ 0x55d246312700] PAT:
+[mpegts @ 0x55d246312700] PMT: len 26
+[mpegts @ 0x55d246312700] pid=100 pes_code=0x1e0
+[mpegts @ 0x55d246312700] PAT:
+[mpegts @ 0x55d246312700] PMT: len 26
+[mpegts @ 0x55d246312700] pid=100 pes_code=0x1e0
+[mpegts @ 0x55d246312700] PAT:
+[mpegts @ 0x55d246312700] PMT: len 26
+[mpegts @ 0x55d246312700] pid=101 pes_code=0x1c0
+[mpegts @ 0x55d246312700] probing stream 1 pp:2500
+Probing aac score:51 size:1476
+[mpegts @ 0x55d246312700] Probe with size=1476, packets=1 detected aac with score=51
+[mpegts @ 0x55d246312700] probed stream 1
+[mpegts @ 0x55d246312700] rfps: 22.750000 0.019625
+[mpegts @ 0x55d246312700] rfps: 22.833333 0.017013
+    Last message repeated 1 times
+[mpegts @ 0x55d246312700] rfps: 22.916667 0.014602
+[mpegts @ 0x55d246312700] rfps: 23.000000 0.012392
+[mpegts @ 0x55d246312700] rfps: 23.083333 0.010383
+[mpegts @ 0x55d246312700] rfps: 23.166667 0.008575
+    Last message repeated 1 times
+[mpegts @ 0x55d246312700] rfps: 23.250000 0.006968
+[mpegts @ 0x55d246312700] rfps: 23.333333 0.005562
+[mpegts @ 0x55d246312700] rfps: 23.416667 0.004357
+    Last message repeated 1 times
+[mpegts @ 0x55d246312700] rfps: 23.500000 0.003353
+    Last message repeated 1 times
+[mpegts @ 0x55d246312700] rfps: 23.583333 0.002550
+[mpegts @ 0x55d246312700] rfps: 23.666667 0.001948
+    Last message repeated 1 times
+[mpegts @ 0x55d246312700] rfps: 23.750000 0.001547
+    Last message repeated 1 times
+[mpegts @ 0x55d246312700] rfps: 23.833333 0.001347
+    Last message repeated 1 times
+[mpegts @ 0x55d246312700] rfps: 23.916667 0.001348
+[mpegts @ 0x55d246312700] rfps: 24.000000 0.001549
+    Last message repeated 1 times
+[mpegts @ 0x55d246312700] rfps: 24.083333 0.001952
+    Last message repeated 1 times
+[mpegts @ 0x55d246312700] rfps: 24.166667 0.002556
+[mpegts @ 0x55d246312700] rfps: 24.250000 0.003361
+[mpegts @ 0x55d246312700] rfps: 24.333333 0.004367
+    Last message repeated 1 times
+[mpegts @ 0x55d246312700] rfps: 24.416667 0.005574
+    Last message repeated 1 times
+[mpegts @ 0x55d246312700] rfps: 24.500000 0.006982
+[mpegts @ 0x55d246312700] rfps: 24.583333 0.008591
+[mpegts @ 0x55d246312700] rfps: 24.666667 0.010401
+    Last message repeated 1 times
+[mpegts @ 0x55d246312700] rfps: 24.750000 0.012411
+[mpegts @ 0x55d246312700] rfps: 24.833333 0.014623
+[mpegts @ 0x55d246312700] rfps: 24.916667 0.017036
+[mpegts @ 0x55d246312700] rfps: 25.000000 0.019650
+[mpegts @ 0x55d246312700] rfps: 47.000000 0.013411
+[mpegts @ 0x55d246312700] rfps: 48.000000 0.006198
+    Last message repeated 1 times
+[mpegts @ 0x55d246312700] rfps: 23.976024 0.001471
+    Last message repeated 1 times
+[mpegts @ 0x55d246312700] rfps: 47.952048 0.005883
+    Last message repeated 1 times
+[mpegts @ 0x55d246312700] Skipping after seek
+[mpegts @ 0x55d246312700] SDT:
+[mpegts @ 0x55d246312700] PAT:
+[mpegts @ 0x55d246312700] PMT: len 26
+[mpegts @ 0x55d246312700] sid=0x1 sec_num=0/0 version=0 tid=2
+[mpegts @ 0x55d246312700] pcr_pid=0x100
+[mpegts @ 0x55d246312700] pid=100 pes_code=0x1e0
+    Last message repeated 1 times
+[mpegts @ 0x55d246312700] PAT:
+[mpegts @ 0x55d246312700] PMT: len 26
+[mpegts @ 0x55d246312700] pid=100 pes_code=0x1e0
+    Last message repeated 1 times
+[mpegts @ 0x55d246312700] PAT:
+[mpegts @ 0x55d246312700] PMT: len 26
+[mpegts @ 0x55d246312700] pid=100 pes_code=0x1e0
+    Last message repeated 1 times
+[mpegts @ 0x55d246312700] PAT:
+[mpegts @ 0x55d246312700] PMT: len 26
+[mpegts @ 0x55d246312700] pid=100 pes_code=0x1e0
+[mpegts @ 0x55d246312700] PAT:
+[mpegts @ 0x55d246312700] PMT: len 26
+[mpegts @ 0x55d246312700] pid=100 pes_code=0x1e0
+    Last message repeated 1 times
+[mpegts @ 0x55d246312700] SDT:
+[mpegts @ 0x55d246312700] PAT:
+[mpegts @ 0x55d246312700] PMT: len 26
+[mpegts @ 0x55d246312700] pid=100 pes_code=0x1e0
+[mpegts @ 0x55d246312700] PAT:
+[mpegts @ 0x55d246312700] PMT: len 26
+[mpegts @ 0x55d246312700] pid=100 pes_code=0x1e0
+[mpegts @ 0x55d246312700] PAT:
+[mpegts @ 0x55d246312700] PMT: len 26
+[mpegts @ 0x55d246312700] pid=101 pes_code=0x1c0
+ 是在这里算出来的，视频的长度和音频的长度明显不一样，结果是按照视频的长度
+[mpegts @ 0x55d246312700] stream 0: start_time: 1.400 duration: 95090.568
+[mpegts @ 0x55d246312700] stream 1: start_time: 1.448 duration: 0.046
+[mpegts @ 0x55d246312700] format: start_time: 1.400 duration: 95090.568 bitrate=0 kb/s
+[mpegts @ 0x55d246312700] After avformat_find_stream_info() pos: 0 bytes read:118064 seeks:2 frames:20
+Input #0, mpegts, from 'sub_108.m3u8_26hours.ts':
+  Duration: 26:24:50.57, start: 1.400000, bitrate: 0 kb/s
+  Program 1 
+    Metadata:
+      service_name    : Service01
+      service_provider: FFmpeg
+    Stream #0:0[0x100], 11, 1/90000: Video: h264 (High), 1 reference frame ([27][0][0][0] / 0x001B), yuv420p(tv, smpte170m/bt709/bt709, progressive, left), 544x960, 0/1, 23.83 tbr, 90k tbn, 180k tbc
+    Stream #0:1[0x101], 9, 1/90000: Audio: aac (HE-AACv2) ([15][0][0][0] / 0x000F), 44100 Hz, stereo, fltp, 28 kb/s
+[h264 @ 0x55d246318860] nal_unit_type: 7, nal_ref_idc: 1
+[h264 @ 0x55d246318860] nal_unit_type: 8, nal_ref_idc: 1
+[h264 @ 0x55d246318860] nal_unit_type: 7, nal_ref_idc: 1
+[h264 @ 0x55d246318860] nal_unit_type: 8, nal_ref_idc: 1
+[AVIOContext @ 0x55d24631b0e0] Statistics: 118064 bytes read, 2 seeks
+root@ubuntu:/home/zhangbin/ffmpeg/RECORD_TEST/refref/testHLS/ts# 

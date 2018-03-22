@@ -1,0 +1,30 @@
+root@ubuntu:/home/zhangbin/ffmpeg/RECORD_TEST/refref/MpegTsAnalyzer-master# ./main.exe /home/zhangbin/ffmpeg/RECORD_TEST/refref/testHLS/ts/sub_108.m3u8_26hours.ts 
+Input file:  /home/zhangbin/ffmpeg/RECORD_TEST/refref/testHLS/ts/sub_108.m3u8_26hours.ts
+Detected PAT: PMT pid = 0x1000
+Detected PMT
+PMT : Program Info : elementary_PID	: 0x100, stream_type : 0x1b (AVC video stream as defined in ITU-T Rec. H.264|ISO/IEC 14496-10 Video)
+PMT : Program Info : elementary_PID	: 0x101, stream_type : 0x0f (13818-7 audio with ADTS transport syntax)
+0x00000234 PCR: 0x01206420[00700.000000ms] (Interval:00700.000000ms)
+0x00000234 PTS: 0x0001ec30[01400.000000ms] (pid:0x100) (delay:700.000000ms)
+0x000019b4 PTS: 0x1fe1cd34f[95091880.000000ms] (pid:0x100)
+0x000019b4 DTS: 0x0001faf5[01442.011108ms] (pid:0x100) (delay:-6724.655762ms)
+0x000027a8 PTS: 0x1fe1cd511[95091888.000000ms] (pid:0x100)
+0x000027a8 DTS: 0x000209b9[01484.011108ms] (pid:0x100) (delay:-11115.989258ms)
+0x0000388c PTS: 0x1fe1cd6d3[95091888.000000ms] (pid:0x100)
+0x0000388c DTS: 0x000218d7[01527.011108ms] (pid:0x100) (delay:-16439.654297ms)
+0x000047f8 PTS: 0x1fe1cd895[95091896.000000ms] (pid:0x100)
+0x000047f8 DTS: 0x00022741[01568.011108ms] (pid:0x100) (delay:-21298.654297ms)
+0x00005820 PTS: 0x1fe1cda57[95091896.000000ms] (pid:0x100)
+0x00005820 DTS: 0x000235ab[01609.011108ms] (pid:0x100) (delay:-26390.988281ms)
+0x00006b38 PTS: 0x1fe1cdc19[95091904.000000ms] (pid:0x100)
+0x00006b38 DTS: 0x0002446f[01651.011108ms] (pid:0x100) (delay:-32415.656250ms)
+0x00008084 PTS: 0x1fe1cdddb[95091912.000000ms] (pid:0x100)
+0x00008084 DTS: 0x000253e7[01695.011108ms] (pid:0x100) (delay:-39138.320312ms)
+0x00009224 PTS: 0x1fe1cdf9d[95091920.000000ms] (pid:0x100)
+0x00009224 DTS: 0x00026143[01733.011108ms] (pid:0x100) (delay:-44700.324219ms)
+0x0000abd8 PTS: 0x1fe1ce15f[95091920.000000ms] (pid:0x100)
+0x0000abd8 DTS: 0x00027007[01775.011108ms] (pid:0x100) (delay:-52824.988281ms)
+-----------------------------
+Max PCR interval: 700.000000ms
+PCR-PTS max gap: 700.000000ms
+root@ubuntu:/home/zhangbin/ffmpeg/RECORD_TEST/refref/MpegTsAnalyzer-master# 
