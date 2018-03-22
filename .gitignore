@@ -1,0 +1,8 @@
+*.mpg
+*.m2t
+*.m2ts
+.vscode
+debug
+*.exe
+*.idea
+MpegTsAnalyzer-master/.idea/
