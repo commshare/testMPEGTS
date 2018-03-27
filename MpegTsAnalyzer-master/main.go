@@ -38,7 +38,7 @@ func parseTsFile(filename string, options options.Options) error {
 	pmt := tsparser.NewPmt()
 
 	const patPid = 0x0
-	const bufSize = 65536
+	const bufSize = 65536 /*64k？*/
 	var pos int64
 	buf := make([]byte, bufSize)
 	for {
@@ -95,9 +95,15 @@ func parseTsFile(filename string, options options.Options) error {
 	}
 	return nil
 }
-
+/*
+            PAT：节目关联表。提供了节目号码和对应PMT表格的PID的对应关系
+			一个个遍历TS包，我们找到PID为0的TS包，这个包叫PAT，这个PAT包里包含了PMT的PID号
+			TS包的包头长度不固定，前32比特（4个字节）固定，后面可能跟有自适应字段（适配域）。32个比特（4个字节）是最小包头。
+*/
 func findPat(data []byte) (int64, error) {
+	/*要保证至少有2个包+1的数据量，第一个包的index是0，第二个包是188，第三个包是188+187，也就是188*2，看循环的条件，要求data至少要有188*2个字节*/
 	for i := 0; i+188*2 <= len(data)-1; i++ {
+		/*这是要连续读取三个ts包么？*/
 		if data[i] == 0x47 && data[i+188] == 0x47 && data[i+188*2] == 0x47 {
 			if (data[i+1]&0x5F) == 0x40 && data[i+2] == 0x00 {
 				return int64(i), nil
