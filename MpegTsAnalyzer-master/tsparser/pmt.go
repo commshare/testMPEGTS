@@ -6,29 +6,29 @@ import (
 	"../bitbuffer"
 )
 
-// Pmt Progran Map Table
+// Pmt Program Map Table
 type Pmt struct {
 	startFlag         bool
 	continuityCounter uint8
 	buf               []byte
 
-	tableID                uint8
-	sectionSyntaxIndicator uint8
-	sectionLength          uint16
-	programNumber          uint16
-	versionNumber          uint8
-	currentNextIndicator   uint8
-	sectionNumber          uint8
-	lastSectionNumber      uint8
-	pcrPid                 uint16
-	programInfoLength      uint16
-	programInfos           []ProgramInfo
+	tableID                uint8 /*0x02*/
+	sectionSyntaxIndicator uint8 /*1 1bit*/
+	sectionLength          uint16 /*12 bit，表示这个字节后面的有用的字节数 ，包括crc32*/
+	programNumber          uint16 /*它指出该节目对应于可应用的Program map PID 。*/
+	versionNumber          uint8 /*指出PMT 的版本号。*/
+	currentNextIndicator   uint8 /*当该位置’1’时，当 前传送的Program map section可用；当该位置’0’时，指示当前传送的Program map section不可用，下一个TS流的Programmap section 有效。*/
+	sectionNumber          uint8 /*总是置为0x00（因为PMT表里表示一个service的信息，一个section 的长度足够）*/
+	lastSectionNumber      uint8  /*总为0x00*/
+	pcrPid                 uint16 /*节目中包含有效pcr字段的传送流中pid*/
+	programInfoLength      uint16 /*12bit域，前两位为00。该域指出跟随其后对节目信息的描述的byte 数。*/
+	programInfos           []ProgramInfo /*节目信息*/
 	crc32                  uint32
 }
 
 // ProgramInfo Program info
 type ProgramInfo struct {
-	streamType    uint8
+	streamType    uint8 /*其中的stream_type标识了对应pid的类型，比如音频、视频或者其他类型（具体建议参考2.4.4.9 Semantic definition of fields in Transport Stream program map section一节）。*/
 	elementaryPid uint16
 	esInfoLength  uint16
 }
@@ -47,7 +47,7 @@ func (p *Pmt) SetContinuityCounter(continuityCounter uint8) { p.continuityCounte
 // PcrPid return PCR_PID.
 func (p *Pmt) PcrPid() uint16 { return p.pcrPid }
 
-// ProgramInfos return ProgramInfos.
+// ProgramInfos return ProgramInfos. 要返回和当前频道关联在一起的其他数据的pid
 func (p *Pmt) ProgramInfos() []ProgramInfo { return p.programInfos }
 
 // Append append ts payload data for buffer.
@@ -145,7 +145,7 @@ func (p *Pmt) Parse() error {
 }
 
 // DumpProgramInfos Dump Program info
-func (p *Pmt) DumpProgramInfos() {
+func (p *Pmt) DumpProgramInfos() { /**/
 	for _, val := range p.programInfos {
 		var streamType string
 		switch val.streamType {

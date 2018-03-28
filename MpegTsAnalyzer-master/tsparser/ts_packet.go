@@ -16,7 +16,7 @@ type TsPacket struct {
 	buf     []byte
 	payload []byte
 
-	syncByte                   uint8
+	syncByte                   uint8 /**/
 	transportErrorIndicator    uint8
 	payloadUnitStartIndicator  uint8
 	transportPriority          uint8

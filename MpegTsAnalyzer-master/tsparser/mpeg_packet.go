@@ -38,9 +38,12 @@ func BufferPsi(file *os.File, pos *int64, pid uint16, mpegPacket MpegPacket, opt
 		}
 
 		tsPacket.Initialize(*pos, options)
+		/*读出精确的188个字节的一个ts包*/
 		tsPacket.Append(tsBuffer)
+		/*这是对188个字节做解析头部*/
 		tsPacket.Parse()
 		if tsPacket.Pid() != pid {
+			/*对不上就不是pmt*/
 			continue
 		}
 

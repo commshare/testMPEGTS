@@ -62,6 +62,7 @@ func parseTsFile(filename string, options options.Options) error {
 		if err != nil {
 			continue
 		}
+		/*pat里有pmt的pid*/
 		pmtPid := pat.PmtPid()
 
 		if _, err = file.Seek(pos, 0); err != nil {
@@ -75,6 +76,7 @@ func parseTsFile(filename string, options options.Options) error {
 		if err != nil {
 			continue
 		}
+		/*所有的节目的pid？*/
 		programs := pmt.ProgramInfos()
 		pcrPid := pmt.PcrPid()
 
@@ -84,6 +86,7 @@ func parseTsFile(filename string, options options.Options) error {
 		fmt.Println("Detected PMT")
 		pmt.DumpProgramInfos()
 
+		/*解析pes么？*/
 		err = tsparser.BufferPes(file, &pos, pcrPid, programs, options)
 		if err != nil {
 			return fmt.Errorf("TS parse error: %s", err)
